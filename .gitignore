@@ -11,6 +11,7 @@ node_modules/
 
 # Convex
 .convex/
-# Note: convex/_generated/ is generated during build
-# For Vercel, it will be generated via 'convex codegen' in the build script
-convex/_generated/
+# Note: convex/_generated/ should NOT be gitignored for Vercel builds
+# The files are generated during build, but we need to ensure they're accessible
+# Uncomment below only if you want to exclude them (not recommended for Vercel):
+# convex/_generated/

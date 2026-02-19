@@ -30,13 +30,24 @@ In your Vercel project settings, add these environment variables:
 
 ### 2. Build Settings
 
-The build command is already configured in `package.json`:
+**Option A: Use Convex Deploy Command (Recommended)**
+
+In Vercel, override the build command to:
 ```
-convex codegen && next build
+npx convex deploy --cmd 'npm run build'
+```
+
+This ensures Convex deploys and generates types before building.
+
+**Option B: Use Standard Build Command**
+
+The build command in `package.json` is:
+```
+convex codegen --once && next build
 ```
 
 This will:
-1. Generate Convex types (`convex codegen`) - requires `CONVEX_DEPLOY_KEY`
+1. Generate Convex types (`convex codegen --once`) - requires `CONVEX_DEPLOY_KEY`
 2. Build your Next.js app (`next build`)
 
 **Important:** Make sure `CONVEX_DEPLOY_KEY` is set in Vercel environment variables, otherwise `convex codegen` will fail and the build will fail.

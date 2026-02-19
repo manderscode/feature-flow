@@ -1,7 +1,7 @@
 "use client"
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import type { Id } from "../../convex/_generated/dataModel"
+import type { Id } from "@/convex/_generated/dataModel"
 
 type Feature = {
   _id: Id<"features">

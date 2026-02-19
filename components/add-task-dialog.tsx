@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { useMutation } from "convex/react"
-import { api } from "../../convex/_generated/api"
+import { api } from "@/convex/_generated/api"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -11,7 +11,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import type { TaskPriority, KanbanColumn } from "@/lib/store"
 import { TEAM_MEMBERS } from "@/lib/store"
-import type { Id } from "../../convex/_generated/dataModel"
+import type { Id } from "@/convex/_generated/dataModel"
 
 type Feature = {
   _id: Id<"features">

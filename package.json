@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "convex codegen && next build",
+    "build": "convex codegen --once && next build",
     "start": "next start",
     "lint": "eslint .",
     "convex:codegen": "convex codegen",
