@@ -3,14 +3,14 @@
 import { useState, useEffect } from "react"
 import { Layers, KanbanSquare } from "lucide-react"
 import { useQuery, useMutation } from "convex/react"
-import { api } from "@/convex/_generated/api"
+import { api } from "../convex/_generated/api"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { FeatureTable } from "@/components/feature-table"
 import { FeatureMatrix } from "@/components/feature-matrix"
 import { KanbanBoard } from "@/components/kanban-board"
 import { AddFeatureDialog } from "@/components/add-feature-dialog"
 import { AddTaskDialog } from "@/components/add-task-dialog"
-import type { Id } from "@/convex/_generated/dataModel"
+import type { Id } from "../convex/_generated/dataModel"
 import type { KanbanColumn } from "@/lib/store"
 
 export default function FeatureFlowPage() {

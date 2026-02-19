@@ -6,7 +6,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import type { FeatureStatus } from "@/lib/store"
-import type { Id } from "@/convex/_generated/dataModel"
+import type { Id } from "../../convex/_generated/dataModel"
 
 type Feature = {
   _id: Id<"features">

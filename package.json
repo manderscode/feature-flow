@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "convex codegen && next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "convex:codegen": "convex codegen",
+    "convex:dev": "convex dev"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

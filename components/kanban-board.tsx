@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { useMutation } from "convex/react"
-import { api } from "@/convex/_generated/api"
+import { api } from "../../convex/_generated/api"
 import { GripVertical, Plus, Calendar, User } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -10,7 +10,7 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import type { KanbanColumn, TaskPriority } from "@/lib/store"
 import { TEAM_MEMBERS } from "@/lib/store"
-import type { Id } from "@/convex/_generated/dataModel"
+import type { Id } from "../../convex/_generated/dataModel"
 
 type Task = {
   _id: Id<"tasks">

@@ -11,4 +11,6 @@ node_modules/
 
 # Convex
 .convex/
+# Note: convex/_generated/ is generated during build
+# For Vercel, it will be generated via 'convex codegen' in the build script
 convex/_generated/
