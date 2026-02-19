@@ -14,10 +14,11 @@ import type { Id } from "@/convex/_generated/dataModel"
 
 type Task = {
   _id: Id<"tasks">
+  _creationTime?: number
   title: string
   description: string
   assignee: string
-  featureId: Id<"features"> | null
+  featureId: string | null
   priority: TaskPriority
   dueDate: string | null
   column: KanbanColumn
@@ -64,7 +65,7 @@ export function KanbanBoard({
     return true
   })
 
-  const featureMap = new Map(features.map((f) => [f._id, f.title]))
+  const featureMap = new Map(features.map((f) => [f._id as string, f.title]))
 
   function handleDragStart(id: Id<"tasks">) {
     setDragId(id)
