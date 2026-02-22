@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { useMutation } from "convex/react"
+import { toast } from "sonner"
 import { api } from "@/convex/_generated/api"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
@@ -52,8 +53,10 @@ export function AddFeatureDialog({
       setAlignment(3)
       setStatus("backlog")
       onClose()
+      toast.success("Feature added")
     } catch (error) {
       console.error("Failed to create feature:", error)
+      toast.error("Failed to add feature. Check your connection and try again.")
     } finally {
       setIsSubmitting(false)
     }

@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { useMutation } from "convex/react"
+import { toast } from "sonner"
 import { api } from "@/convex/_generated/api"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
@@ -47,7 +48,7 @@ export function AddTaskDialog({
         title: title.trim(),
         description,
         assignee,
-        featureId: featureId === "none" ? null : (featureId as Id<"features">),
+        featureId: featureId === "none" ? null : featureId,
         priority,
         column,
         dueDate: dueDate || null,
@@ -60,8 +61,10 @@ export function AddTaskDialog({
       setColumn("backlog")
       setDueDate("")
       onClose()
+      toast.success("Task added")
     } catch (error) {
       console.error("Failed to create task:", error)
+      toast.error("Failed to add task. Check your connection and try again.")
     } finally {
       setIsSubmitting(false)
     }

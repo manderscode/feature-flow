@@ -33,7 +33,7 @@ export const create = mutation({
     title: v.string(),
     description: v.string(),
     assignee: v.string(),
-    featureId: v.union(v.id("features"), v.null()),
+    featureId: v.union(v.string(), v.null()),
     priority: v.union(v.literal("high"), v.literal("medium"), v.literal("low")),
     dueDate: v.union(v.string(), v.null()),
     column: v.union(
@@ -56,7 +56,7 @@ export const update = mutation({
     title: v.optional(v.string()),
     description: v.optional(v.string()),
     assignee: v.optional(v.string()),
-    featureId: v.optional(v.union(v.id("features"), v.null())),
+    featureId: v.optional(v.union(v.string(), v.null())),
     priority: v.optional(v.union(v.literal("high"), v.literal("medium"), v.literal("low"))),
     dueDate: v.optional(v.union(v.string(), v.null())),
     column: v.optional(
